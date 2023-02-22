@@ -1,0 +1,48 @@
+h1 {
+	margin: auto;
+	width:500px;
+	text-align: center;
+	border-style: solid;
+}
+
+#section1 {
+	margin: auto;
+	display: flex;
+	width: 1000px
+}
+
+#shibe {
+	margin: auto;
+	float: left;
+	clip-path: circle();
+	shape-outside: circle();
+}
+
+.float {
+	margin: auto;
+	float: right;
+	clip-path: circle();
+	shape-outside: circle();
+}
+
+#section2 {
+	margin: auto;
+	width: 1000px;
+}
+
+#dolly {
+	margin: auto;
+	display: block;
+}
+
+.watermark {
+	text-align: center;
+	color: rgba(0, 0, 0, 0.2);
+	font-size: 2rem;
+	font-weight: bold;
+	margin: -200px 0px 0px 0px;
+	padding: 20px;
+	text-transform: uppercase;
+	transform: rotate(-45deg);
+	user-select: none;
+}
