@@ -2,25 +2,23 @@ h1 {
 	margin: auto;
 	width:500px;
 	text-align: center;
-	border-style: solid;
+	border: 8px solid pink;
 }
 
 #section1 {
 	margin: auto;
-	display: flex;
-	width: 1000px
+	width: 500px;
+	text-align: justify;
 }
 
 #shibe {
 	margin: auto;
-	float: left;
+	float: right;
 	clip-path: circle();
 	shape-outside: circle();
 }
 
 .float {
-	margin: auto;
-	float: right;
 	clip-path: circle();
 	shape-outside: circle();
 }
@@ -45,4 +43,19 @@ h1 {
 	text-transform: uppercase;
 	transform: rotate(-45deg);
 	user-select: none;
+}
+
+.wrapper {
+	margin: auto;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	background-color: pink;
+	text-align: center;
+	padding: 20px;
+}
+
+.item {
+	background-color: white;
+	padding: 15px;
+	border: 3px solid pink;
 }
