@@ -5,22 +5,101 @@ h1 {
 	border: 8px solid pink;
 }
 
-#section1 {
+.wrap {
+	max-width: 1280px;
 	margin: auto;
-	width: 500px;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+}
+
+.col1, 
+.col2 {
+	padding: 10px;
 	text-align: justify;
+	width: calc(50% + 220px);
 }
 
-#shibe {
-	margin: auto;
+p {
+	padding: 5px;
+	margin: 0 0 1em;
+}
+
+.col1:before, 
+.col2:before {
 	float: right;
-	clip-path: circle();
-	shape-outside: circle();
+	width: 1px;
+	height: 90px;
+	content: "";
 }
 
-.float {
-	clip-path: circle();
-	shape-outside: circle();
+.col2:before {
+	float: left;
+	width: 1px;
+	height: 90px;
+	content: "";
+}
+
+.shibe {
+	float: right;
+	clear: right;
+	margin: 0 0 20px 20px;
+	border-radius: 50%;
+	border: 10px solid #fff;
+	clip-path: circle(50%);
+	shape-outside: circle(50%);
+}
+
+.col2 img {
+	float: left;
+	margin: 0 20px 20px 0;
+	clear: left;
+}
+
+.col1 .inner {
+	margin-right: 220px;
+}
+
+.col2 .inner {
+	margin-left: 220px;
+}
+
+.col2 {
+	margin-left: -440px;
+}
+
+@media screen and (max-width: 800px) {
+	.wrap {
+		display: block;
+	}
+	
+	.col2:before {
+		display: none;
+	}
+	
+	.col1, 
+	.col2, 
+	.col1 .inner, 
+	.col2 .inner {
+		width: auto;
+		margin: 0;
+	}
+	
+	.col2 .shibe {
+		display: none;
+	}
+	
+	.shibe {
+		width: 50%;
+		height: auto;
+		min-width: 100px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.col1:before {
+		display: none;
+	}
 }
 
 #section2 {
